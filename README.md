@@ -6,11 +6,11 @@
 
 <h1>Oto Müzik</h1>
 
-![Stars](https://img.shields.io/github/stars/Burakcnz/Oto Müzik?style=for-the-badge&color=f1c40f)
+![Stars](https://img.shields.io/github/stars/Burakcnz/oto-muzik?style=for-the-badge&color=f1c40f)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 ![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)
 
-<p>Oto Müzik - Stream Your Car's Audio Data</p>
+<p>Stream your favorite tracks with ease</p>
 
 </div>
 
@@ -25,12 +25,12 @@
 <h2 align="center">✨ Features</h2>
 
 <table>
-  <tr><td>🛠️ <b>Real-Time Streaming</b></td><td>Fetch and process audio data from connected vehicles in real time.</td></tr>
-  <tr><td>🔍 <b>Search Engine</b></td><td>Filter vehicle audio streams based on location, brand, or model through API queries.</td></tr>
-  <tr><td>📊 <b>Analytics Dashboard</b></td><td>Generate detailed analytics reports to monitor vehicle usage patterns over time.</td></tr>
-  <tr><td>👥 <b>User Authentication</b></td><td>Secure user accounts and access control for different roles (admin, user).</td></tr>
-  <tr><td>🔐 <b>Encryption Service</b></td><td>Encrypt sensitive audio data transmissions between the server and clients securely.</td></tr>
-  <tr><td>💬 <b>Chatbot Integration</b></td><td>Implement a chatbot feature that assists users with vehicle diagnostics through voice commands.</td></tr>
+  <tr><td>🛠️ <b>RESTful APIs</b></td><td>Manage audio files and metadata through HTTP requests</td></tr>
+  <tr><td>🔈 <b>Player Control</b></td><td>Toggle playback, adjust volume via API endpoints</td></tr>
+  <tr><td>⚙ <b>User Authentication</b></td><td>Secure user sessions using JWT tokens for authenticated users</td></tr>
+  <tr><td>📊 <b>Analytics Dashboard</b></td><td>View play counts, popular songs with visualizations</td></tr>
+  <tr><td>💬 <b>Chat Functionality</b></td><td>Interact in real-time chats within the application's interface</td></tr>
+  <tr><td>🛠️ <b>Admin Tools</b></td><td>Configure and manage backend settings via a dedicated admin API</td></tr>
 </table>
 
 ---
@@ -47,7 +47,7 @@
 
 ```bash
 # Clone
-git clone https://github.com/Burakcnz/Oto Müzik.git
+git clone https://github.com/Burakcnz/oto-muzik.git
 cd Oto Müzik
 
 # Install
