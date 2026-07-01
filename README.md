@@ -1,47 +1,44 @@
+<div align="center">
+
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=120&section=header&color=0:0d1117,50:1a1b26,100:414868&fontSize=70&fontColor=FFFFFF" />
 
----
+</div>
 
 <div align="center">
 
 <h1>Oto Müzik</h1>
 
-![Stars](https://img.shields.io/github/stars/Burakcnz/oto-muzik?style=for-the-badge&color=f1c40f)
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
-![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat&logo=mit&logoColor=white) ![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat&logo=git&logoColor=white)
 
-<p>Stream your favorite tracks with ease</p>
+<i>Build Your Own Music Backend Easily</i>
 
-</div>
 
 ---
+
+</div>
 
 <div align="center">
-<img src="https://skillicons.dev/icons?i=fastapi" height="45" />
-</div>
 
----
+<img src="https://skillicons.dev/icons?i=fastapi" height="45" />
+
+</div>
 
 <h2 align="center">✨ Features</h2>
 
-<table>
-  <tr><td>🛠️ <b>RESTful APIs</b></td><td>Manage audio files and metadata through HTTP requests</td></tr>
-  <tr><td>🔈 <b>Player Control</b></td><td>Toggle playback, adjust volume via API endpoints</td></tr>
-  <tr><td>⚙ <b>User Authentication</b></td><td>Secure user sessions using JWT tokens for authenticated users</td></tr>
-  <tr><td>📊 <b>Analytics Dashboard</b></td><td>View play counts, popular songs with visualizations</td></tr>
-  <tr><td>💬 <b>Chat Functionality</b></td><td>Interact in real-time chats within the application's interface</td></tr>
-  <tr><td>🛠️ <b>Admin Tools</b></td><td>Configure and manage backend settings via a dedicated admin API</td></tr>
-</table>
-
----
+<p align="center">
+💻 <b>API</b> — Create a FastAPI backend for music APIs<br>
+🎤 <b>Tracks</b> — Manage and retrieve tracks using CRUD operations<br>
+🔈 <b>Playlists</b> — Add, update, delete playlists with ease<br>
+📊 <b>Statistics</b> — Fetch real-time statistics on track plays<br>
+🌍 <b>Region Filters</b> — Apply region filters for local music data<br>
+🛠️ <b>Admin Panel</b> — Secure admin panel to manage users and settings<br>
+</p>
 
 <h2 align="center">🛠️ Tech Stack</h2>
 
-<table>
-  <tr><td><img src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white" alt="FastAPI" /></td><td><b>FastAPI</b> - Modern high-performance web framework for Python</td></tr>
-</table>
-
----
+<p align="center">
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white" alt="FastAPI" title="FastAPI" />
+</p>
 
 <h2 align="center">📦 Installation</h2>
 
@@ -58,16 +55,12 @@ python main.py
 
 ```
 
----
-
 <h2 align="center">🚀 Usage</h2>
 
-Start the application with `python main.py` and open the URL shown in the terminal.
+To use this app, first navigate to the project directory where you installed dependencies. Run `python app.py` in your terminal. Then open another tab and visit `http://127.0.0.1:8000/docs`. Here you can interact with all endpoints using HTTP requests or try out sample requests provided by Swagger UI. To test the API, use tools like Postman to send GET/POST/PATCH/DELETE requests.
 
 The application will be available at `http://localhost:3000`.
 
-
----
 
 <h2 align="center">📁 Project Structure</h2>
 
@@ -81,19 +74,19 @@ The application will be available at `http://localhost:3000`.
 │   ├── index.html
 ```
 
----
+<p align="center">⭐ ⭐ ⭐</p>
 
-<p align="center"><b>· · ·</b></p>
-
----
+<h2 align="center">📊 Stats</h2>
 
 <div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=Burakcnz&theme=dracula&hide_border=true&show_icons=true" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=Burakcnz&theme=dracula&hide_border=true&layout=compact&langs_count=8" />
-<img src="https://github-profile-trophy.vercel.app?username=Burakcnz&theme=dracula&no-frame=true&column=7" />
-</div>
 
----
+<img src="https://github-readme-stats.vercel.app/api?username=Burakcnz&theme=dracula&hide_border=true&show_icons=true" width="400" />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs?username=Burakcnz&theme=dracula&hide_border=true&layout=compact&langs_count=8" width="400" />
+
+<img src="https://github-profile-trophy.vercel.app?username=Burakcnz&theme=dracula&no-frame=true&column=7" />
+
+</div>
 
 <h2 align="center">📄 License</h2>
 
