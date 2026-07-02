@@ -10,7 +10,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat&logo=mit&logoColor=white) ![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat&logo=git&logoColor=white)
 
-<i>Stream Music Queues with Ease</i>
+<i>Detected as: Python API service</i>
 
 
 ---
@@ -26,12 +26,8 @@
 <h2 align="center">✨ Features</h2>
 
 <p align="center">
-🛠️ <b>/api/queue</b> — Manages music queue operations like adding/removing songs<br>
-🔗 <b>/open-folder</b> — Opens specified download folder for easy access to files<br>
-⚙️ <b>/settings</b> — Allows users to customize API settings and preferences<br>
-📉 <b>/stats</b> — Displays statistics related to the API usage and performance metrics<br>
-🎧 <b>/api/parse</b> — Parses music links into playable formats using yt-dlp library<br>
-🔀 <b>/queue/reorder</b> — Reorders items in the queue, moving songs up or down<br>
+⚡ <b>FastAPI Server</b> — High-performance Python API with automatic OpenAPI documentation<br>
+🔌 <b>API Endpoints</b> — 18 API routes: /, /api/parse, /api/queue/{song_id}/remove, /api/queue/clear...<br>
 </p>
 
 <h2 align="center">🛠️ Tech Stack</h2>
@@ -57,7 +53,7 @@ python main.py
 
 <h2 align="center">🚀 Usage</h2>
 
-After running `python app.py`, you can interact with your API by navigating to endpoints like `/open-folder` and clicking on "Open" within a web browser. To manage music queues, use routes such as `/api/queue/clear`. For detailed statistics, visit the `/stats` endpoint which will provide insights based on how users are interacting with the service.
+Start the application with `python main.py` and open the URL shown in the terminal.
 
 The application will be available at `http://localhost:3000`.
 
