@@ -10,7 +10,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat&logo=mit&logoColor=white) ![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat&logo=git&logoColor=white)
 
-<i>Streamlined Music Queue Management</i>
+<i>Oto Müzik - Stream & Control Your Music Queue</i>
 
 
 ---
@@ -26,11 +26,8 @@
 <h2 align="center">✨ Features</h2>
 
 <p align="center">
-🚀 <b>/</b> — Manages audio queue with removal and clearing endpoints<br>
-🔗 <b>/api/download/start</b> — Initiates downloads for queued songs from URL<br>
-📁 <b>/open-folder</b> — Opens download folder containing newly downloaded files<br>
-🔍 <b>/api/queue/{song_id}/remove</b> — Removes specific song IDs from the queue<br>
-⏱️ <b>/stats</b> — Provides statistics on queue activity and progress<br>
+⚡ <b>FastAPI Server</b> — High-performance Python API with automatic OpenAPI documentation<br>
+🔌 <b>API Endpoints</b> — 18 API routes: /, /api/parse, /api/queue/{song_id}/remove, /api/queue/clear...<br>
 </p>
 
 <h2 align="center">🛠️ Tech Stack</h2>
@@ -56,7 +53,7 @@ python main.py
 
 <h2 align="center">🚀 Usage</h2>
 
-To use this app, simply run `python app.py` in your terminal. After launching, you can access the main page by navigating to `/`. From there, songs are added via an endpoint like `/api/queue/start/{url}`, where `{url}` is a download link from YouTube or another audio source. Songs removed and downloaded files will appear under the `/open-folder` route. For real-time updates on queue status changes, connect a WebSocket client by accessing `ws://localhost:8000/ws`.
+Start the application with `python main.py` and open the URL shown in the terminal.
 
 The application will be available at `http://localhost:3000`.
 
