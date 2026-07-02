@@ -10,7 +10,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat&logo=mit&logoColor=white) ![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat&logo=git&logoColor=white)
 
-<i>Detected as: Python API service</i>
+<i>Playback & Management for Oto Müzik Backend</i>
 
 
 ---
@@ -53,7 +53,7 @@ python main.py
 
 <h2 align="center">🚀 Usage</h2>
 
-Start the application with `python main.py` and open the URL shown in the terminal.
+After running `python app.py`, you can interact with the API by sending HTTP requests. Use the `/api/queue` routes to manage audio queues, like adding or removing songs from a queue. For downloading files directly from your server, use the `/api/download/start` endpoint. To clear errors and retry failed songs, utilize the `/api/errors/{song_id}/retry` route. Explore other features by experimenting with different API endpoints in your requests library of choice.
 
 The application will be available at `http://localhost:3000`.
 
