@@ -10,7 +10,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat&logo=mit&logoColor=white) ![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat&logo=git&logoColor=white)
 
-<i>Build Your Own Music Backend Easily</i>
+<i>Stream Music Queues with Ease</i>
 
 
 ---
@@ -26,12 +26,12 @@
 <h2 align="center">✨ Features</h2>
 
 <p align="center">
-💻 <b>API</b> — Create a FastAPI backend for music APIs<br>
-🎤 <b>Tracks</b> — Manage and retrieve tracks using CRUD operations<br>
-🔈 <b>Playlists</b> — Add, update, delete playlists with ease<br>
-📊 <b>Statistics</b> — Fetch real-time statistics on track plays<br>
-🌍 <b>Region Filters</b> — Apply region filters for local music data<br>
-🛠️ <b>Admin Panel</b> — Secure admin panel to manage users and settings<br>
+🛠️ <b>/api/queue</b> — Manages music queue operations like adding/removing songs<br>
+🔗 <b>/open-folder</b> — Opens specified download folder for easy access to files<br>
+⚙️ <b>/settings</b> — Allows users to customize API settings and preferences<br>
+📉 <b>/stats</b> — Displays statistics related to the API usage and performance metrics<br>
+🎧 <b>/api/parse</b> — Parses music links into playable formats using yt-dlp library<br>
+🔀 <b>/queue/reorder</b> — Reorders items in the queue, moving songs up or down<br>
 </p>
 
 <h2 align="center">🛠️ Tech Stack</h2>
@@ -57,7 +57,7 @@ python main.py
 
 <h2 align="center">🚀 Usage</h2>
 
-To use this app, first navigate to the project directory where you installed dependencies. Run `python app.py` in your terminal. Then open another tab and visit `http://127.0.0.1:8000/docs`. Here you can interact with all endpoints using HTTP requests or try out sample requests provided by Swagger UI. To test the API, use tools like Postman to send GET/POST/PATCH/DELETE requests.
+After running `python app.py`, you can interact with your API by navigating to endpoints like `/open-folder` and clicking on "Open" within a web browser. To manage music queues, use routes such as `/api/queue/clear`. For detailed statistics, visit the `/stats` endpoint which will provide insights based on how users are interacting with the service.
 
 The application will be available at `http://localhost:3000`.
 
