@@ -10,7 +10,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat&logo=mit&logoColor=white) ![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat&logo=git&logoColor=white)
 
-<i>Playback & Management for Oto Müzik Backend</i>
+<i>Streamlined Music Queue Management</i>
 
 
 ---
@@ -26,8 +26,11 @@
 <h2 align="center">✨ Features</h2>
 
 <p align="center">
-⚡ <b>FastAPI Server</b> — High-performance Python API with automatic OpenAPI documentation<br>
-🔌 <b>API Endpoints</b> — 18 API routes: /, /api/parse, /api/queue/{song_id}/remove, /api/queue/clear...<br>
+🚀 <b>/</b> — Manages audio queue with removal and clearing endpoints<br>
+🔗 <b>/api/download/start</b> — Initiates downloads for queued songs from URL<br>
+📁 <b>/open-folder</b> — Opens download folder containing newly downloaded files<br>
+🔍 <b>/api/queue/{song_id}/remove</b> — Removes specific song IDs from the queue<br>
+⏱️ <b>/stats</b> — Provides statistics on queue activity and progress<br>
 </p>
 
 <h2 align="center">🛠️ Tech Stack</h2>
@@ -53,7 +56,7 @@ python main.py
 
 <h2 align="center">🚀 Usage</h2>
 
-After running `python app.py`, you can interact with the API by sending HTTP requests. Use the `/api/queue` routes to manage audio queues, like adding or removing songs from a queue. For downloading files directly from your server, use the `/api/download/start` endpoint. To clear errors and retry failed songs, utilize the `/api/errors/{song_id}/retry` route. Explore other features by experimenting with different API endpoints in your requests library of choice.
+To use this app, simply run `python app.py` in your terminal. After launching, you can access the main page by navigating to `/`. From there, songs are added via an endpoint like `/api/queue/start/{url}`, where `{url}` is a download link from YouTube or another audio source. Songs removed and downloaded files will appear under the `/open-folder` route. For real-time updates on queue status changes, connect a WebSocket client by accessing `ws://localhost:8000/ws`.
 
 The application will be available at `http://localhost:3000`.
 
