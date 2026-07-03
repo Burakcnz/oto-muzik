@@ -10,7 +10,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat&logo=mit&logoColor=white) ![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat&logo=git&logoColor=white)
 
-<i>Oto Müzik - Stream & Convert YouTube Videos to MP3</i>
+<i>A web-based YouTube to MP3 downloader with queue management, real-time progress tracking via WebSocket, and automatic video selection for ambiguous queries.</i>
 
 
 ---
@@ -26,9 +26,15 @@
 <h2 align="center">✨ Features</h2>
 
 <p align="center">
-⚡ <b>FastAPI Server</b> — High-performance Python API with automatic OpenAPI documentation<br>
-🔌 <b>API Endpoints</b> — 18 API routes: /, /api/parse, /api/queue/{song_id}/remove, /api/queue/clear...<br>
-📝 <b>About</b> — Project Name: Oto Müzik<br>
+🔍 <b>YouTube video search and MP3 conversion</b> — YouTube video search and MP3 conversion<br>
+📋 <b>Queue management with drag</b> — Queue management with drag-and-drop reorder<br>
+🔄 <b>Real</b> — Real-time download progress via WebSocket<br>
+🎬 <b>Automatic video selection with user over</b> — Automatic video selection with user override for ambiguous results<br>
+🎵 <b>Configurable audio quality (128/192/256/</b> — Configurable audio quality (128/192/256/320 kbps)<br>
+⬇️ <b>Pause/Resume/Stop download controls</b> — Pause/Resume/Stop download controls<br>
+⚠️ <b>Error handling with retry functionality</b> — Error handling with retry functionality<br>
+📁 <b>Direct file/folder open from browser</b> — Direct file/folder open from browser<br>
+🍪 <b>Cookie support for age</b> — Cookie support for age-restricted content<br>
 </p>
 
 <h2 align="center">🛠️ Tech Stack</h2>
@@ -44,17 +50,26 @@
 git clone https://github.com/Burakcnz/oto-muzik.git
 cd Oto Müzik
 
-# Install
-pip install -r requirements.txt
+# Install Python 3.10+
+# Install Python 3.10+
 
-# Run
-python main.py
+# Install dependencies: pip
+Install dependencies: pip install fastapi uvicorn yt-dlp jinja2 python-multipart pydantic
+
+# Ensure FFmpeg is
+Ensure FFmpeg is installed and in PATH
+
+# Run: python app.py
+Run: python app.py or double-click başlat.bat
+
+# Browser opens automatically at http://localhost:80
+# Browser opens automatically at http://localhost:8000
 
 ```
 
 <h2 align="center">🚀 Usage</h2>
 
-After running `python app.py`, open your web browser to access the Oto Müzik service at http://localhost:8000. Use the queue management feature by dragging songs into or out of the download list. Monitor progress through real-time updates, pause/resume downloads as needed, and manage errors with provided API routes. Directly open MP3 files for playback from within the interface, or use the built-in folder opening function to navigate downloaded files.
+Install Python 3.10+. Install dependencies: pip install fastapi uvicorn yt-dlp jinja2 python-multipart pydantic. Ensure FFmpeg is installed and in PATH. Run: python app.py or double-click başlat.bat. Browser opens automatically at http://localhost:8000.
 
 The application will be available at `http://localhost:3000`.
 
