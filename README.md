@@ -10,7 +10,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat&logo=mit&logoColor=white) ![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat&logo=git&logoColor=white)
 
-<i>Oto Müzik - Stream & Control Your Music Queue</i>
+<i>Oto Müzik - Stream & Convert YouTube Videos to MP3</i>
 
 
 ---
@@ -28,6 +28,7 @@
 <p align="center">
 ⚡ <b>FastAPI Server</b> — High-performance Python API with automatic OpenAPI documentation<br>
 🔌 <b>API Endpoints</b> — 18 API routes: /, /api/parse, /api/queue/{song_id}/remove, /api/queue/clear...<br>
+📝 <b>About</b> — Project Name: Oto Müzik<br>
 </p>
 
 <h2 align="center">🛠️ Tech Stack</h2>
@@ -53,7 +54,7 @@ python main.py
 
 <h2 align="center">🚀 Usage</h2>
 
-Start the application with `python main.py` and open the URL shown in the terminal.
+After running `python app.py`, open your web browser to access the Oto Müzik service at http://localhost:8000. Use the queue management feature by dragging songs into or out of the download list. Monitor progress through real-time updates, pause/resume downloads as needed, and manage errors with provided API routes. Directly open MP3 files for playback from within the interface, or use the built-in folder opening function to navigate downloaded files.
 
 The application will be available at `http://localhost:3000`.
 
@@ -63,6 +64,7 @@ The application will be available at `http://localhost:3000`.
 ```
 ├── app.py
 ├── başlat.bat
+├── project_info.txt
 ├── static/
 │   ├── app.js
 │   ├── style.css

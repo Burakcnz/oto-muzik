@@ -1,0 +1,20 @@
+Project Name: Oto Müzik
+Description: A web-based YouTube to MP3 downloader with queue management, real-time progress tracking via WebSocket, and automatic video selection for ambiguous queries.
+Technology Stack: Python, FastAPI, yt-dlp, FFmpeg, Jinja2, WebSocket, HTML/CSS/JavaScript
+Features:
+- YouTube video search and MP3 conversion
+- Queue management with drag-and-drop reorder
+- Real-time download progress via WebSocket
+- Automatic video selection with user override for ambiguous results
+- Configurable audio quality (128/192/256/320 kbps)
+- Pause/Resume/Stop download controls
+- Error handling with retry functionality
+- Direct file/folder open from browser
+- Cookie support for age-restricted content
+Dependencies: fastapi, uvicorn, yt-dlp, jinja2, python-multipart, pydantic
+Setup Instructions:
+1. Install Python 3.10+
+2. Install dependencies: pip install fastapi uvicorn yt-dlp jinja2 python-multipart pydantic
+3. Ensure FFmpeg is installed and in PATH
+4. Run: python app.py or double-click başlat.bat
+5. Browser opens automatically at http://localhost:8000
