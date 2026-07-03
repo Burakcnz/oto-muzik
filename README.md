@@ -48,9 +48,8 @@
 ```bash
 # Clone
 git clone https://github.com/Burakcnz/oto-muzik.git
-cd Oto Müzik
+cd oto-muzik
 
-# Install Python 3.10+
 # Install Python 3.10+
 
 # Install dependencies: pip
@@ -62,7 +61,6 @@ Ensure FFmpeg is installed and in PATH
 # Run: python app.py
 Run: python app.py or double-click başlat.bat
 
-# Browser opens automatically at http://localhost:80
 # Browser opens automatically at http://localhost:8000
 
 ```
