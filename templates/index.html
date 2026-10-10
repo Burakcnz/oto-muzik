@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oto Müzik — YouTube MP3 İndirici</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 36 36" fill="none">
+                        <circle cx="18" cy="18" r="18" fill="url(#g1)"/>
+                        <path d="M14 12l10 6-10 6V12z" fill="#fff"/>
+                        <defs><linearGradient id="g1" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#e94560"/><stop offset="1" stop-color="#c23152"/></linearGradient></defs>
+                    </svg>
+                </div>
+                <div>
+                    <h1>Oto Müzik</h1>
+                    <p class="subtitle">YouTube MP3 İndirici</p>
+                </div>
+            </div>
+            <div class="header-stats">
+                <div class="stat"><span class="stat-num" id="statTotal">0</span><span class="stat-label">Toplam</span></div>
+                <div class="stat"><span class="stat-num" id="statPending">0</span><span class="stat-label">Bekleyen</span></div>
+                <div class="stat"><span class="stat-num accent" id="statDone">0</span><span class="stat-label">İndirilen</span></div>
+                <div class="stat"><span class="stat-num danger" id="statError">0</span><span class="stat-label">Hatalı</span></div>
+            </div>
+        </header>
+
+        <section class="input-section">
+            <div class="input-area">
+                <div class="input-tabs">
+                    <button class="tab active" data-tab="text">Metin Girişi</button>
+                    <button class="tab" data-tab="file">Dosya Yükle</button>
+                </div>
+                <div class="tab-content active" id="tabText">
+                    <textarea id="songInput" placeholder="Her satıra bir şarkı adı veya şarkı sözü yazın...&#10;YouTube linki de yapıştırabilirsiniz.&#10;&#10;Örnek: Bohemian Rhapsody&#10;https://youtube.com/watch?v=fJ9rUzIMcZQ&#10;Stairway to Heaven"></textarea>
+                    <div class="input-actions">
+                        <button class="btn btn-primary" id="btnParse">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                            Listeye Ekle
+                        </button>
+                        <span class="line-count" id="lineCount">0 şarkı</span>
+                    </div>
+                </div>
+                <div class="tab-content" id="tabFile">
+                    <div class="drop-zone" id="dropZone">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9,15 12,12 15,15"/></svg>
+                        <p>.txt dosyasını sürükle bırak veya <span class="link">tıkla</span></p>
+                        <input type="file" id="fileInput" accept=".txt,.csv,.text" hidden>
+                    </div>
+                    <div class="file-info" id="fileInfo" style="display:none">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+                        <span id="fileName"></span>
+                        <button class="btn-icon" id="btnRemoveFile">✕</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="controls-section">
+            <div class="controls">
+                <div class="controls-left">
+                    <button class="btn btn-success" id="btnStartAll">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5,3 19,12 5,21"/></svg>
+                        İndirmeyi Başlat
+                    </button>
+                    <button class="btn btn-warning" id="btnPause" style="display:none">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                        <span id="btnPauseText">Duraklat</span>
+                    </button>
+                    <button class="btn btn-danger" id="btnStop" style="display:none">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
+                        Durdur
+                    </button>
+                </div>
+                <div class="controls-right">
+                    <button class="btn btn-ghost" id="btnClearQueue">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,6 5,6 21,6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+                        Temizle
+                    </button>
+                    <button class="btn btn-ghost" id="btnOpenFolder">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+                        Klasörü Aç
+                    </button>
+                </div>
+            </div>
+            <div class="progress-global" id="progressGlobal" style="display:none">
+                <div class="progress-global-bar"><div class="progress-global-fill" id="progressGlobalFill"></div></div>
+                <span class="progress-global-text" id="progressGlobalText">0 / 0</span>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="columns">
+                <div class="column" id="colQueue">
+                    <div class="col-header">
+                        <h2>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                            Sıra
+                        </h2>
+                        <span class="badge" id="queueCount">0</span>
+                    </div>
+                    <div class="song-list" id="queueList">
+                        <div class="empty-state" id="queueEmpty">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.25"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                            <p>Şarkı listesi ekleyin</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column" id="colDownload">
+                    <div class="col-header">
+                        <h2>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            İndiriliyor
+                        </h2>
+                        <span class="badge active" id="downloadingCount">0</span>
+                    </div>
+                    <div class="song-list" id="downloadList">
+                        <div class="empty-state" id="downloadEmpty">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.25"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            <p>İndirme bekleniyor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column" id="colDone">
+                    <div class="col-header">
+                        <h2>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Tamamlanan
+                        </h2>
+                        <div class="col-header-right">
+                            <span class="badge success" id="doneCount">0</span>
+                            <button class="btn-clear" onclick="clearCompleted()" title="Listeyi Temizle">Temizle</button>
+                        </div>
+                    </div>
+                    <div class="song-list" id="doneList">
+                        <div class="empty-state" id="doneEmpty">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.25"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            <p>Henüz indirilen yok</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column" id="colError">
+                    <div class="col-header col-header-error">
+                        <h2>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            Hatalar
+                        </h2>
+                        <div class="col-header-right">
+                            <span class="badge error" id="errorCount">0</span>
+                            <button class="btn-clear" onclick="clearErrors()" title="Listeyi Temizle">Temizle</button>
+                        </div>
+                    </div>
+                    <div class="song-list" id="errorList">
+                        <div class="empty-state" id="errorEmpty">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.25"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            <p>Hatalı şarkı yok</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="toast-container" id="toasts"></div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
